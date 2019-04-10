@@ -1,0 +1,38 @@
+<html>
+    <head>
+    </head>
+
+    <body>
+        <div id="app">
+            <h1>{{a}}</h1>
+            <p>b : {{ b }}</p>
+            <p>c : {{ b.c }}</p>
+            <p>e : {{ b.d.e }}</p>
+            <label for="input3">a</label>
+            <input id="input3" type="text" v-model='a'>
+            <br/>
+            <label for="input1">b.c</label>
+            <input id="input1" type="text" v-model='b.c'>
+            <br/>
+            <label for="input2">b.d.e</label>
+            <input id="input2" type="text" v-model='b.d.e'>
+        </div>
+        <script src="./lib/index.js"></script>
+        <script>
+            let nue = new Nue({
+                el: '#app',
+                data: {
+                    a: 1,
+                    b: {
+                        c: 2,
+                        d: {
+                            e: 3,
+                        }
+                    },
+                    f: 5
+                }
+            })
+        
+        </script>
+    </body>
+</html>
